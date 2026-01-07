@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import CardGrid from '../CardGrid.astro';
+import ListStack from '../ListStack.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.caregivers;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Cuidadores y familias"
+            title={site.caregivers?.title}
+            subtitle={site.caregivers?.subtitle}
+          />
+          <CardGrid items={site.caregivers?.useCases} />
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Ventajas"
+            title="Beneficios prácticos en el día a día"
+            subtitle="Todo lo que necesitas para reducir la carga mental y coordinar con claridad."
+          />
+          <div class="grid grid-2">
+            <div class="card">
+              <h3 class="card-title">Organización centralizada</h3>
+              <p class="muted">
+                Planifica turnos, tareas y medicaciones con visibilidad completa para todos los roles.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Seguimiento y auditoría</h3>
+              <p class="muted">
+                Historial completo de notificaciones para evitar duplicidades y malentendidos.
+              </p>
+            </div>
+          </div>
+          <div style="margin-top: 28px;">
+            <ListStack items={site.caregivers?.highlights} />
+          </div>
+        </div>
+      </section>
+
+      <CTA
+        locale={locale}
+        title="Centraliza la coordinación en un solo lugar"
+        subtitle="Pide una demo y descubre cómo DiAlgo se adapta a tu red de cuidado."
+        primaryCta={{ label: 'Agendar demo', href: '/contacto' }}
+        secondaryCta={{ label: 'Ver recursos', href: '/recursos' }}
+      />
+    </>
+  )}
+</BaseLayout>

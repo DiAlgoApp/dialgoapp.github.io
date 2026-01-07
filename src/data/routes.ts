@@ -1,0 +1,16 @@
+export const routes = [
+  '/',
+  '/como-funciona',
+  '/para-cuidadores',
+  '/para-personas-mayores',
+  '/ciencia',
+  '/seguridad',
+  '/recursos',
+  '/contacto',
+  '/docs',
+  '/descargar',
+  '/blog',
+  '/legal/aviso-legal',
+  '/legal/privacidad',
+  '/legal/cookies',
+];

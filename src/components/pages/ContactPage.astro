@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.contact;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <section class="section">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Contacto"
+          title={site.contact?.title}
+          subtitle={site.contact?.subtitle}
+        />
+        <div class="grid grid-2" style="align-items: start;">
+          <form class="card" method="post" action="#">
+            <div class="form-grid">
+              <div>
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" required />
+              </div>
+              <div>
+                <label for="role">Rol</label>
+                <select id="role" name="role">
+                  <option>Familiar</option>
+                  <option>Cuidador profesional</option>
+                  <option>Centro de día</option>
+                  <option>Investigación</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Cuéntanos tu caso"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+              <p class="muted">
+                El formulario se conectará en la fase beta. Mientras tanto, escríbenos a
+                <strong> {site.contact?.email}</strong>.
+              </p>
+            </div>
+          </form>
+          <div class="card card--glass">
+            <h3 class="card-title">Canales directos</h3>
+            <p class="muted">Te respondemos en menos de 24 horas laborables.</p>
+            <div style="margin-top: 16px;">
+              <p><strong>Email:</strong> {site.contact?.email}</p>
+              <p><strong>Teléfono:</strong> {site.contact?.phone}</p>
+              <p><strong>Ubicación:</strong> {site.contact?.address}</p>
+            </div>
+            <div style="margin-top: 20px;">
+              {site.contact?.channels?.map((channel) => (
+                <p><strong>{channel.label}:</strong> {channel.value}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

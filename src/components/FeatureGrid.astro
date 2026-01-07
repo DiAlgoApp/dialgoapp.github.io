@@ -1,0 +1,13 @@
+---
+const { features = [] } = Astro.props;
+---
+{features?.length > 0 && (
+  <div class="grid grid-3">
+    {features.map((feature, index) => (
+      <div class="card reveal" style={`--delay: ${index * 80}ms;`}>
+        <h3 class="card-title">{feature.title}</h3>
+        <p class="muted">{feature.description}</p>
+      </div>
+    ))}
+  </div>
+)}

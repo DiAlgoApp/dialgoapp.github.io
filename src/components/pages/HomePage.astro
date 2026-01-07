@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import Hero from '../Hero.astro';
+import SectionHeading from '../SectionHeading.astro';
+import Stats from '../Stats.astro';
+import FeatureGrid from '../FeatureGrid.astro';
+import CardGrid from '../CardGrid.astro';
+import StepsTimeline from '../StepsTimeline.astro';
+import ListStack from '../ListStack.astro';
+import Testimonials from '../Testimonials.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.home;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <Hero hero={site.hero} locale={locale} />
+
+      {site.home?.stats && (
+        <section class="section section--soft">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Impacto inmediato"
+              title="Beneficios clave para toda la familia"
+              subtitle="Una plataforma pensada para simplificar la coordinación y aportar tranquilidad diaria."
+            />
+            <Stats stats={site.home.stats} />
+          </div>
+        </section>
+      )}
+
+      {site.home?.benefits && (
+        <section class="section">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Propuesta de valor"
+              title="Coordina cuidados con claridad y confianza"
+              subtitle="Todo lo que necesita una red familiar para mantenerse alineada."
+            />
+            <div class="grid grid-3">
+              {site.home.benefits.map((benefit, index) => (
+                <div class="card reveal" style={`--delay: ${index * 90}ms;`}>
+                  <h3 class="card-title">{benefit.title}</h3>
+                  <p class="muted">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.features?.length > 0 && (
+        <section class="section section--soft">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Funciones esenciales"
+              title="Características principales"
+              subtitle="Cada herramienta está diseñada para reducir fricciones y mejorar la coordinación diaria."
+            />
+            <FeatureGrid features={site.features} />
+          </div>
+        </section>
+      )}
+
+      {site.howItWorks?.steps && (
+        <section class="section">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Cómo funciona"
+              title="Un flujo simple, claro y seguro"
+              subtitle="Desde el registro hasta la comunicación diaria en cuatro pasos."
+            />
+            <div class="grid grid-2" style="align-items: start;">
+              <StepsTimeline steps={site.howItWorks.steps} />
+              <div class="callout">
+                <h3>En menos de una semana, toda la red coordinada</h3>
+                <p class="muted">
+                  DiAlgo se adapta a la realidad de cada familia. Puedes empezar con un núcleo reducido y
+                  sumar cuidadores según sea necesario.
+                </p>
+                <ListStack items={site.howItWorks.flow} />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.caregivers?.useCases && (
+        <section class="section section--soft">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Cuidadores y familias"
+              title={site.caregivers.title}
+              subtitle={site.caregivers.subtitle}
+            />
+            <CardGrid items={site.caregivers.useCases} />
+            <div style="margin-top: 32px;">
+              <ListStack items={site.caregivers.highlights} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.seniors?.features && (
+        <section class="section">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Para personas mayores"
+              title={site.seniors.title}
+              subtitle={site.seniors.subtitle}
+            />
+            <div class="grid grid-2" style="align-items: start;">
+              <div class="card">
+                <h3 class="card-title">Modo simplificado</h3>
+                <ListStack items={site.seniors.features} />
+              </div>
+              <div class="card card--glass">
+                <h3 class="card-title">{site.seniors.support?.title}</h3>
+                <p class="muted">{site.seniors.support?.description}</p>
+                <div class="tag-list" style="margin-top: 20px;">
+                  <span class="tag">Botones grandes</span>
+                  <span class="tag">Lectura fácil</span>
+                  <span class="tag">Sin menús complejos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.science?.summary && (
+        <section class="section section--soft">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Gerontecnología"
+              title={site.science.title}
+              subtitle={site.science.summary}
+            />
+            <CardGrid items={site.science.principles} />
+            <div style="margin-top: 32px;">
+              <CardGrid items={site.science.evidence} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.security?.summary && (
+        <section class="section">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Seguridad"
+              title={site.security.title}
+              subtitle={site.security.summary}
+            />
+            <div class="grid grid-2">
+              <div class="card">
+                <h3 class="card-title">Medidas clave</h3>
+                <ListStack items={site.security.safeguards} />
+              </div>
+              <div class="card card--glass">
+                <h3 class="card-title">Cumplimiento y transparencia</h3>
+                <ListStack items={site.security.compliance} />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.home?.testimonials && (
+        <section class="section section--soft">
+          <div class="container">
+            <SectionHeading
+              eyebrow="Historias reales"
+              title="Confianza construida en el día a día"
+              subtitle="Equipos y familias que ya trabajan con DiAlgo."
+            />
+            <Testimonials testimonials={site.home.testimonials} />
+          </div>
+        </section>
+      )}
+
+      <CTA
+        locale={locale}
+        title="¿Quieres una demo guiada?"
+        subtitle="Nuestro equipo te acompaña para configurar DiAlgo según tu realidad de cuidado."
+        primaryCta={{ label: 'Solicitar demo', href: '/contacto' }}
+        secondaryCta={{ label: 'Ver descargas', href: '/descargar' }}
+      />
+    </>
+  )}
+</BaseLayout>

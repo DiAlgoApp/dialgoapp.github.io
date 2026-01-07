@@ -1,0 +1,13 @@
+---
+const { steps = [] } = Astro.props;
+---
+{steps?.length > 0 && (
+  <div class="timeline">
+    {steps.map((step, index) => (
+      <div class="timeline-item reveal" style={`--delay: ${index * 80}ms;`}>
+        <h3 class="card-title">{step.title}</h3>
+        <p class="muted">{step.description}</p>
+      </div>
+    ))}
+  </div>
+)}

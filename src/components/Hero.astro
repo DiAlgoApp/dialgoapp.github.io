@@ -1,0 +1,53 @@
+---
+import { withLocalePath } from '../data/site';
+
+const { hero = {}, locale } = Astro.props;
+---
+{hero?.title && (
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        {hero.eyebrow && <span class="eyebrow">{hero.eyebrow}</span>}
+        {hero.slogan && <div class="badge" style="margin-top: 14px;">{hero.slogan}</div>}
+        <h1 class="hero-title reveal" style="--delay: 80ms;">{hero.title}</h1>
+        {hero.subtitle && <p class="hero-subtitle reveal" style="--delay: 140ms;">{hero.subtitle}</p>}
+        <div class="hero-actions reveal" style="--delay: 200ms;">
+          {hero.primaryCta?.label && (
+            <a class="btn btn-primary" href={withLocalePath(locale, hero.primaryCta.href)}>
+              {hero.primaryCta.label}
+            </a>
+          )}
+          {hero.secondaryCta?.label && (
+            <a class="btn btn-secondary" href={withLocalePath(locale, hero.secondaryCta.href)}>
+              {hero.secondaryCta.label}
+            </a>
+          )}
+        </div>
+        {hero.note && <p class="hero-note">{hero.note}</p>}
+        {hero.highlights?.length > 0 && (
+          <ul class="tag-list" style="margin-top: 22px;">
+            {hero.highlights.map((item) => (
+              <li class="tag">{item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div class="hero-panel float">
+        <div class="hero-mockup">
+          <div class="mockup-card">
+            <strong>Recordatorio · 09:00</strong>
+            <span>Medicación tomada y confirmada.</span>
+          </div>
+          <div class="mockup-card">
+            <strong>Mensaje rápido</strong>
+            <span>"Estoy bien, gracias" en un clic.</span>
+          </div>
+          <div class="mockup-card">
+            <strong>Estado familiar</strong>
+            <span>3 cuidadores activos hoy.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}

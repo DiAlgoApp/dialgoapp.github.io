@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import StepsTimeline from '../StepsTimeline.astro';
+import ListStack from '../ListStack.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.howItWorks;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Flujo principal"
+            title="Cómo funciona DiAlgo"
+            subtitle="Un proceso pensado para que cada familia se sienta acompañada desde el primer día."
+          />
+          <div class="grid grid-2" style="align-items: start;">
+            <StepsTimeline steps={site.howItWorks?.steps} />
+            <div class="card">
+              <h3 class="card-title">Checklist de implementación</h3>
+              <ListStack items={site.howItWorks?.flow} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Demo"
+            title={site.howItWorks?.demo?.title}
+            subtitle={site.howItWorks?.demo?.description}
+          />
+          <div class="grid grid-2">
+            <div class="card card--glass">
+              <h3 class="card-title">Modo familiar</h3>
+              <p class="muted">
+                Vista completa con calendario, historial de mensajes y control de notificaciones.
+              </p>
+              <div class="tag-list" style="margin-top: 18px;">
+                <span class="tag">Agenda compartida</span>
+                <span class="tag">Mensajes grupales</span>
+                <span class="tag">Prioridades</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Modo persona mayor</h3>
+              <p class="muted">
+                Interfaz simplificada con botones grandes y respuestas rápidas para cada día.
+              </p>
+              <div class="tag-list" style="margin-top: 18px;">
+                <span class="tag">Lectura fácil</span>
+                <span class="tag">Confirmaciones claras</span>
+                <span class="tag">Contraste alto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTA
+        locale={locale}
+        title="¿Quieres ver DiAlgo en acción?"
+        subtitle="Te mostramos el flujo completo y resolvemos tus dudas en una llamada corta."
+        primaryCta={{ label: 'Solicitar demo', href: '/contacto' }}
+        secondaryCta={{ label: 'Descargar dossier', href: '/recursos' }}
+      />
+    </>
+  )}
+</BaseLayout>

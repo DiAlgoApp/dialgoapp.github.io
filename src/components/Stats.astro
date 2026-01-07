@@ -1,0 +1,13 @@
+---
+const { stats = [] } = Astro.props;
+---
+{stats?.length > 0 && (
+  <div class="stats">
+    {stats.map((stat) => (
+      <div class="stat">
+        <div class="stat-value">{stat.value}</div>
+        <div class="muted">{stat.label}</div>
+      </div>
+    ))}
+  </div>
+)}

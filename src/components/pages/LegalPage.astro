@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+
+const { locale = 'es', legalKey = 'notice' } = Astro.props;
+const site = getSite(locale);
+const content = site.legal?.[legalKey];
+const metaMap = {
+  notice: site.meta?.pages?.legalNotice,
+  privacy: site.meta?.pages?.privacy,
+  cookies: site.meta?.pages?.cookies,
+};
+const meta = metaMap[legalKey];
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <section class="section">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Legal"
+          title={content?.title}
+          subtitle="Información legal y condiciones vinculadas al uso de DiAlgo."
+        />
+        <div class="grid grid-2">
+          {content?.sections?.map((section, index) => (
+            <div class="card reveal" style={`--delay: ${index * 70}ms;`}>
+              <h3 class="card-title">{section.title}</h3>
+              <p class="muted">{section.content}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

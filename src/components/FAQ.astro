@@ -1,0 +1,13 @@
+---
+const { faq = [] } = Astro.props;
+---
+{faq?.length > 0 && (
+  <div class="faq">
+    {faq.map((item, index) => (
+      <details class="reveal" style={`--delay: ${index * 70}ms;`}>
+        <summary>{item.question}</summary>
+        <p class="muted">{item.answer}</p>
+      </details>
+    ))}
+  </div>
+)}

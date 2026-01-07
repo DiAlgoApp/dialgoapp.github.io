@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite, withLocalePath } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.download;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Acceso"
+            title={site.download?.title}
+            subtitle={site.download?.subtitle}
+          />
+          <div class="grid grid-3">
+            {site.download?.options?.map((option, index) => (
+              <div class="card reveal" style={`--delay: ${index * 80}ms;`}>
+                <h3 class="card-title">{option.title}</h3>
+                <p class="muted">{option.description}</p>
+                {option.cta?.label && (
+                  <a class="btn btn-primary" href={withLocalePath(locale, option.cta.href)}>
+                    {option.cta.label}
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTA
+        locale={locale}
+        title="¿Quieres priorizar tu acceso?"
+        subtitle="Indícanos tu contexto y te ofrecemos la mejor opción."
+        primaryCta={{ label: 'Contactar', href: '/contacto' }}
+        secondaryCta={{ label: 'Ver cómo funciona', href: '/como-funciona' }}
+      />
+    </>
+  )}
+</BaseLayout>

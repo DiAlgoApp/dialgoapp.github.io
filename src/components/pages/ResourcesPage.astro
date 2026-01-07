@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite, withLocalePath } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import FAQ from '../FAQ.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.resources;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Recursos"
+            title={site.resources?.title}
+            subtitle={site.resources?.subtitle}
+          />
+          {site.resources?.guides?.length > 0 && (
+            <div class="grid grid-3">
+              {site.resources.guides.map((guide, index) => (
+                <a class="card reveal" style={`--delay: ${index * 80}ms;`} href={withLocalePath(locale, guide.href)}>
+                  <span class="badge">Guía</span>
+                  <h3 class="card-title">{guide.title}</h3>
+                  <p class="muted">{guide.description}</p>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Preguntas frecuentes"
+            title="FAQ"
+            subtitle="Respuestas rápidas a las dudas más comunes."
+          />
+          <FAQ faq={site.resources?.faq} />
+        </div>
+      </section>
+
+      <CTA
+        locale={locale}
+        title="¿Necesitas ayuda personalizada?"
+        subtitle="Estamos listos para acompañarte en la implementación."
+        primaryCta={{ label: 'Contactar', href: '/contacto' }}
+        secondaryCta={{ label: 'Ver seguridad', href: '/seguridad' }}
+      />
+    </>
+  )}
+</BaseLayout>

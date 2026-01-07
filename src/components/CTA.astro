@@ -1,0 +1,25 @@
+---
+import { withLocalePath } from '../data/site';
+
+const { title, subtitle, primaryCta, secondaryCta, locale } = Astro.props;
+---
+{title && (
+  <section class="section section--ink">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center;">
+        <div>
+          <h2>{title}</h2>
+          {subtitle && <p class="muted">{subtitle}</p>}
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end;">
+          {secondaryCta?.label && (
+            <a class="btn btn-ghost" href={withLocalePath(locale, secondaryCta.href)}>{secondaryCta.label}</a>
+          )}
+          {primaryCta?.label && (
+            <a class="btn btn-primary" href={withLocalePath(locale, primaryCta.href)}>{primaryCta.label}</a>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+)}

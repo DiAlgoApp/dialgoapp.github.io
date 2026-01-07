@@ -1,0 +1,37 @@
+---
+import { withLocalePath } from '../data/site';
+
+const { locale, navItems = [], ctas = {}, langLinks = [] } = Astro.props;
+const primaryCta = ctas?.primary;
+const secondaryCta = ctas?.secondary;
+const filteredNav = (navItems || []).filter((item) => item?.label);
+---
+<header class="site-header">
+  <div class="nav-inner container">
+    <a class="brand" href={withLocalePath(locale, '/')}><span class="brand-mark">D</span> DiAlgo</a>
+    {filteredNav.length > 0 && (
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          {filteredNav.map((item) => (
+            <li><a href={withLocalePath(locale, item.href)}>{item.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+    <div class="header-actions">
+      <div class="lang-switcher" aria-label="Selector de idioma">
+        {langLinks.map((link) => (
+          <a class={link.active ? 'active' : ''} href={link.href} aria-current={link.active ? 'page' : undefined}
+            >{link.label}</a
+          >
+        ))}
+      </div>
+      {secondaryCta?.label && (
+        <a class="btn btn-ghost" href={withLocalePath(locale, secondaryCta.href)}>{secondaryCta.label}</a>
+      )}
+      {primaryCta?.label && (
+        <a class="btn btn-primary" href={withLocalePath(locale, primaryCta.href)}>{primaryCta.label}</a>
+      )}
+    </div>
+  </div>
+</header>

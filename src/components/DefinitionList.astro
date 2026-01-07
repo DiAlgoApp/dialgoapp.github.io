@@ -1,0 +1,13 @@
+---
+const { items = [] } = Astro.props;
+---
+{items?.length > 0 && (
+  <ul class="definition-list">
+    {items.map((item, index) => (
+      <li class="reveal" style={`--delay: ${index * 60}ms;`}>
+        <strong>{item.title}</strong>
+        <p class="muted">{item.description}</p>
+      </li>
+    ))}
+  </ul>
+)}

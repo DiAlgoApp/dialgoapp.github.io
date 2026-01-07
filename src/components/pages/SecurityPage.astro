@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import ListStack from '../ListStack.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.security;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Seguridad y privacidad"
+            title={site.security?.title}
+            subtitle={site.security?.summary}
+          />
+          <div class="grid grid-2">
+            <div class="card">
+              <h3 class="card-title">Medidas técnicas</h3>
+              <ListStack items={site.security?.safeguards} />
+            </div>
+            <div class="card card--glass">
+              <h3 class="card-title">Cumplimiento y buenas prácticas</h3>
+              <ListStack items={site.security?.compliance} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Transparencia"
+            title="Protección de datos y confianza"
+            subtitle="Nos comprometemos con políticas claras y accesibles para cada familia."
+          />
+          <div class="grid grid-3">
+            <div class="card">
+              <h3 class="card-title">GDPR</h3>
+              <p class="muted">Consentimiento explícito y derechos de acceso siempre disponibles.</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Minimización</h3>
+              <p class="muted">Recogemos solo los datos imprescindibles para coordinar cuidados.</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Acceso controlado</h3>
+              <p class="muted">Permisos por rol y auditoría de accesos en cada familia.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTA
+        locale={locale}
+        title="¿Necesitas detalles técnicos?"
+        subtitle="Podemos compartir documentación ampliada y auditorías bajo solicitud."
+        primaryCta={{ label: 'Hablar con el equipo', href: '/contacto' }}
+        secondaryCta={{ label: 'Ver documentación', href: '/docs' }}
+      />
+    </>
+  )}
+</BaseLayout>

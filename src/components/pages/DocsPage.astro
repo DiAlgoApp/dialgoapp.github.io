@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import ListStack from '../ListStack.astro';
+import DefinitionList from '../DefinitionList.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.docs;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Documentación técnica"
+            title={site.docs?.title}
+            subtitle={site.docs?.intro}
+          />
+          <div class="grid grid-2">
+            <div class="card">
+              <h3 class="card-title">Stack principal</h3>
+              <ListStack items={site.docs?.stack} />
+            </div>
+            <div class="card card--glass">
+              <h3 class="card-title">Arquitectura</h3>
+              <DefinitionList items={site.docs?.architecture} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <SectionHeading
+            eyebrow="API / Endpoints"
+            title="Puntos clave"
+            subtitle="Endpoints internos orientativos. La API pública está en preparación."
+          />
+          <div class="card">
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Método</th>
+                    <th>Endpoint</th>
+                    <th>Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {site.docs?.endpoints?.map((endpoint) => (
+                    <tr>
+                      <td>{endpoint.method}</td>
+                      <td>{endpoint.path}</td>
+                      <td class="muted">{endpoint.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Modelo de datos"
+            title="Estructura principal en RTDB"
+            subtitle="Colecciones y rutas principales para la coordinación de cuidados."
+          />
+          <div class="grid grid-2">
+            <div class="card">
+              <h3 class="card-title">Rutas principales</h3>
+              <ListStack items={site.docs?.dataModel} />
+            </div>
+            <div class="card card--glass">
+              <h3 class="card-title">KPIs recomendados</h3>
+              <ListStack items={site.docs?.kpis} />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )}
+</BaseLayout>

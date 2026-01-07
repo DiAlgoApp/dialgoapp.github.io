@@ -1,0 +1,44 @@
+---
+import { withLocalePath } from '../data/site';
+
+const { locale, footer = {} } = Astro.props;
+const columns = footer.columns || [];
+const social = footer.social || [];
+const hasContent = footer.tagline || columns.length > 0 || social.length > 0;
+---
+{hasContent && (
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand">
+            <span class="brand-mark">D</span> DiAlgo
+          </div>
+          {footer.tagline && <p class="muted">{footer.tagline}</p>}
+        </div>
+        <div class="footer-columns">
+          {columns.map((column) => (
+            <div>
+              <div class="footer-title">{column.title}</div>
+              <div class="footer-links">
+                {column.links?.map((link) => (
+                  <a href={withLocalePath(locale, link.href)}>{link.label}</a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© {new Date().getFullYear()} DiAlgo. Todos los derechos reservados.</span>
+        {social.length > 0 && (
+          <div class="social-links">
+            {social.map((item) => (
+              <a href={item.href} rel="noreferrer" target="_blank">{item.label}</a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </footer>
+)}

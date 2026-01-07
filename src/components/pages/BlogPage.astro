@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.blog;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <section class="section">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Blog"
+          title={site.blog?.title}
+          subtitle={site.blog?.subtitle}
+        />
+        <div class="grid grid-3">
+          {site.blog?.posts?.map((post, index) => (
+            <div class="card reveal" style={`--delay: ${index * 80}ms;`}>
+              <span class="badge">{post.date}</span>
+              <h3 class="card-title">{post.title}</h3>
+              <p class="muted">{post.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

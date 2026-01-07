@@ -1,0 +1,13 @@
+---
+const { testimonials = [] } = Astro.props;
+---
+{testimonials?.length > 0 && (
+  <div class="grid grid-3">
+    {testimonials.map((item, index) => (
+      <div class="card card--glass reveal" style={`--delay: ${index * 90}ms;`}>
+        <p>“{item.quote}”</p>
+        <p class="muted">— {item.author}</p>
+      </div>
+    ))}
+  </div>
+)}

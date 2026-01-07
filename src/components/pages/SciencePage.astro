@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSite } from '../../data/site';
+import SectionHeading from '../SectionHeading.astro';
+import CardGrid from '../CardGrid.astro';
+import CTA from '../CTA.astro';
+
+const { locale = 'es' } = Astro.props;
+const site = getSite(locale);
+const meta = site.meta?.pages?.science;
+const isSpanish = locale === 'es';
+---
+<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+  {isSpanish && (
+    <>
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Gerontecnología"
+            title={site.science?.title}
+            subtitle={site.science?.summary}
+          />
+          <CardGrid items={site.science?.principles} />
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Marco conceptual"
+            title="Evidencia y prácticas recomendadas"
+            subtitle="Referencias clave para el diseño centrado en la persona mayor."
+          />
+          <CardGrid items={site.science?.evidence} />
+          <div class="callout" style="margin-top: 32px;">
+            <h3>Referencias adicionales</h3>
+            <p class="muted">
+              Estamos preparando un repositorio de estudios y guías con enlaces verificados. Si quieres
+              colaborar, escríbenos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <CTA
+        locale={locale}
+        title="Investigación aplicada al cuidado real"
+        subtitle="Comparte tu experiencia profesional y ayúdanos a validar nuevas funcionalidades."
+        primaryCta={{ label: 'Colaborar', href: '/contacto' }}
+        secondaryCta={{ label: 'Ver documentación', href: '/docs' }}
+      />
+    </>
+  )}
+</BaseLayout>
