@@ -326,6 +326,48 @@ const es = {
         href: 'https://www.age-platform.eu/',
       },
     ],
+    referencesInternational: [
+      {
+        title: 'WHO · Ageing and health (fact sheet)',
+        description: 'Síntesis internacional sobre envejecimiento, salud y retos del cuidado.',
+        href: 'https://www.who.int/news-room/fact-sheets/detail/ageing-and-health',
+      },
+      {
+        title: 'WHO · Decade of Healthy Ageing',
+        description: 'Marco global para mejorar la vida de las personas mayores (2021–2030).',
+        href: 'https://www.who.int/initiatives/decade-of-healthy-ageing',
+      },
+      {
+        title: 'WHO · Integrated Care for Older People (ICOPE)',
+        description: 'Guía internacional para cuidados integrados centrados en la persona.',
+        href: 'https://www.who.int/publications/i/item/9789241515993',
+      },
+      {
+        title: 'International Society for Gerontechnology',
+        description: 'Sociedad internacional dedicada a la gerontecnología.',
+        href: 'https://www.gerontechnology.org/',
+      },
+      {
+        title: 'Journal of Gerontechnology (Aim & Scope)',
+        description: 'Publicaciones científicas sobre tecnología aplicada al envejecimiento.',
+        href: 'https://journal.gerontechnology.org/Aim.aspx',
+      },
+      {
+        title: 'BMC Geriatrics · Intervenciones tecnológicas para cuidadores',
+        description: 'Revisión y metaanálisis sobre tecnologías que reducen la carga del cuidador.',
+        href: 'https://bmcgeriatr.biomedcentral.com/articles/10.1186/s12877-024-05018-w',
+      },
+      {
+        title: 'Systematic Reviews · e-Health y envejecimiento saludable',
+        description: 'Revisión sistemática sobre intervenciones e‑health en mayores.',
+        href: 'https://systematicreviewsjournal.biomedcentral.com/articles/10.1186/s13643-020-01385-8',
+      },
+      {
+        title: 'BMC Public Health · Adopción de tecnología en mayores',
+        description: 'Revisión integrativa sobre barreras y facilitadores de adopción tecnológica.',
+        href: 'https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-18036-5',
+      },
+    ],
   },
   security: {
     title: 'Seguridad y privacidad',
