@@ -15,7 +15,7 @@ const description = pageDescription || site.meta?.defaultDescription || '';
 const keywords = site.meta?.keywords;
 const currentPath = path || Astro.url.pathname || '/';
 const canonical = site.siteUrl ? new URL(currentPath, site.siteUrl).toString() : currentPath;
-const ogImage = site.siteUrl ? new URL('/og-image.svg', site.siteUrl).toString() : '/og-image.svg';
+const ogImage = site.siteUrl ? new URL('/og-image.png', site.siteUrl).toString() : '/og-image.png';
 const langLinks = locales.map((code) => ({
   code,
   label: code.toUpperCase(),
@@ -61,6 +61,9 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={site.siteName} />
     <meta name="twitter:card" content="summary_large_image" />
