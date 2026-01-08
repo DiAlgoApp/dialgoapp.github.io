@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite } from '../../data/site';
 import SectionHeading from '../SectionHeading.astro';
 import CardGrid from '../CardGrid.astro';
+import ReferenceGrid from '../ReferenceGrid.astro';
 import CTA from '../CTA.astro';
 
 const { locale = 'es' } = Astro.props;
@@ -39,6 +40,17 @@ const isSpanish = locale === 'es';
               colaborar, escríbenos.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Referencias"
+            title="Enlaces y fuentes verificadas"
+            subtitle="Documentación pública y estándares de referencia en envejecimiento y accesibilidad."
+          />
+          <ReferenceGrid items={site.science?.references} />
         </div>
       </section>
 

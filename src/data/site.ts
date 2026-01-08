@@ -291,6 +291,43 @@ const es = {
         description: 'Interfaces que priorizan seguridad, autonomía y confianza.',
       },
     ],
+    references: [
+      {
+        title: 'OMS · Envejecimiento y salud',
+        description: 'Panorama global sobre envejecimiento, salud y necesidades de cuidado.',
+        href: 'https://www.who.int/news-room/fact-sheets/detail/ageing-and-health',
+      },
+      {
+        title: 'OMS · Decenio del Envejecimiento Saludable',
+        description: 'Iniciativa internacional para mejorar la vida de las personas mayores.',
+        href: 'https://www.who.int/initiatives/decade-of-healthy-ageing',
+      },
+      {
+        title: 'OMS · ICOPE (atención integrada)',
+        description: 'Guía para cuidados integrados centrados en la persona mayor.',
+        href: 'https://www.who.int/publications/i/item/9789241515993',
+      },
+      {
+        title: 'International Society for Gerontechnology',
+        description: 'Comunidad científica centrada en tecnología para el envejecimiento.',
+        href: 'https://www.gerontechnology.org/',
+      },
+      {
+        title: 'Journal of Gerontechnology',
+        description: 'Publicaciones científicas y tendencias en gerontecnología.',
+        href: 'https://journal.gerontechnology.org/Aim.aspx',
+      },
+      {
+        title: 'WCAG · Accesibilidad web',
+        description: 'Estándares de accesibilidad para interfaces inclusivas.',
+        href: 'https://www.w3.org/WAI/standards-guidelines/wcag/',
+      },
+      {
+        title: 'NCOA · Aging in place',
+        description: 'Recursos prácticos para apoyar la permanencia en el hogar.',
+        href: 'https://www.ncoa.org/aging-in-place/',
+      },
+    ],
   },
   security: {
     title: 'Seguridad y privacidad',

@@ -1,0 +1,20 @@
+---
+const { items = [] } = Astro.props;
+---
+{items?.length > 0 && (
+  <div class="grid grid-3">
+    {items.map((item, index) => (
+      <a
+        class="card reveal"
+        style={`--delay: ${index * 80}ms;`}
+        href={item.href}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span class="badge">Referencia</span>
+        <h3 class="card-title">{item.title}</h3>
+        <p class="muted">{item.description}</p>
+      </a>
+    ))}
+  </div>
+)}
