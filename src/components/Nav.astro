@@ -8,7 +8,12 @@ const filteredNav = (navItems || []).filter((item) => item?.label);
 ---
 <header class="site-header">
   <div class="nav-inner container">
-    <a class="brand" href={withLocalePath(locale, '/')}><span class="brand-mark">D</span> DiAlgo</a>
+    <a class="brand" href={withLocalePath(locale, '/')}>
+      <span class="brand-mark">
+        <img class="brand-logo" src="/logo.png" alt="DiAlgo" width="36" height="36" />
+      </span>
+      <span>DiAlgo</span>
+    </a>
     {filteredNav.length > 0 && (
       <nav aria-label="Navegación principal">
         <ul class="nav-links">

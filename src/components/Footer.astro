@@ -12,7 +12,10 @@ const hasContent = footer.tagline || columns.length > 0 || social.length > 0;
       <div class="footer-top">
         <div>
           <div class="brand">
-            <span class="brand-mark">D</span> DiAlgo
+            <span class="brand-mark">
+              <img class="brand-logo" src="/logo.png" alt="DiAlgo" width="36" height="36" />
+            </span>
+            <span>DiAlgo</span>
           </div>
           {footer.tagline && <p class="muted">{footer.tagline}</p>}
         </div>
