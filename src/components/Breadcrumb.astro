@@ -1,0 +1,98 @@
+---
+import { withLocalePath } from '../data/site';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  locale: string;
+  items: BreadcrumbItem[];
+  siteUrl?: string;
+}
+
+const { locale, items, siteUrl = '' } = Astro.props;
+
+const fullItems = [
+  { label: 'Inicio', href: '/' },
+  ...items,
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: fullItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    ...(item.href && {
+      item: siteUrl
+        ? new URL(withLocalePath(locale, item.href), siteUrl).toString()
+        : withLocalePath(locale, item.href),
+    }),
+  })),
+};
+---
+
+<nav class="breadcrumb" aria-label="Migas de pan">
+  <ol class="breadcrumb-list">
+    {fullItems.map((item, index) => (
+      <li class="breadcrumb-item">
+        {index < fullItems.length - 1 ? (
+          <>
+            <a href={withLocalePath(locale, item.href || '/')}>{item.label}</a>
+            <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          </>
+        ) : (
+          <span aria-current="page">{item.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+<style>
+  .breadcrumb {
+    padding: 16px 0;
+    font-size: 0.9rem;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .breadcrumb-item a {
+    color: var(--ink-500);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .breadcrumb-item a:hover {
+    color: var(--primary);
+  }
+
+  .breadcrumb-item span[aria-current='page'] {
+    color: var(--ink-800);
+    font-weight: 600;
+  }
+
+  .breadcrumb-separator {
+    color: var(--ink-400);
+    user-select: none;
+  }
+</style>

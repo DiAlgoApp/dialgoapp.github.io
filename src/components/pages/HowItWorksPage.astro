@@ -11,7 +11,12 @@ const site = getSite(locale);
 const meta = site.meta?.pages?.howItWorks;
 const isSpanish = locale === 'es';
 ---
-<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+<BaseLayout
+  locale={locale}
+  pageTitle={meta?.title}
+  pageDescription={meta?.description}
+  breadcrumbs={[{ label: 'Cómo funciona' }]}
+>
   {isSpanish && (
     <>
       <section class="section">

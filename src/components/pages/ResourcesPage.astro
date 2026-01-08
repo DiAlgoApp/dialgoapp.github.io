@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite, withLocalePath } from '../../data/site';
 import SectionHeading from '../SectionHeading.astro';
 import FAQ from '../FAQ.astro';
-import ReferenceGrid from '../ReferenceGrid.astro';
 import CTA from '../CTA.astro';
 
 const { locale = 'es' } = Astro.props;
@@ -11,7 +10,15 @@ const site = getSite(locale);
 const meta = site.meta?.pages?.resources;
 const isSpanish = locale === 'es';
 ---
-<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+<BaseLayout
+  locale={locale}
+  pageTitle={meta?.title}
+  pageDescription={meta?.description}
+  breadcrumbs={[
+    { label: 'Por qué funciona', href: '/ciencia' },
+    { label: 'Recursos y FAQ' },
+  ]}
+>
   {isSpanish && (
     <>
       <section class="section">
@@ -43,17 +50,6 @@ const isSpanish = locale === 'es';
             subtitle="Respuestas rápidas a las dudas más comunes."
           />
           <FAQ faq={site.resources?.faq} />
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <SectionHeading
-            eyebrow="Enlaces externos"
-            title="Programas y recursos en España"
-            subtitle="Iniciativas públicas y referencias para profundizar en envejecimiento activo."
-          />
-          <ReferenceGrid items={site.resources?.references} badgeLabel="Enlace" />
         </div>
       </section>
 

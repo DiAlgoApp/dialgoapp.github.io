@@ -21,11 +21,11 @@ const es = {
   siteName: 'DiAlgo',
   siteUrl: 'https://dialgoapp.github.io',
   meta: {
-    defaultTitle: 'DiAlgo — Conecta y cuida',
+    defaultTitle: 'DiAlgo — Comunicación y cuidado familiar para personas mayores',
     defaultDescription:
-      'Comunicación familiar pensada para personas mayores. Mensajes, recordatorios y coordinación de cuidados en un espacio seguro.',
+      'Comunicación familiar para personas mayores, recordatorios de medicación, gerontecnología y cuidado a domicilio. La app para conectar generaciones.',
     keywords:
-      'gerontecnología, cuidado personas mayores, recordatorios medicación, comunicación familiar, app para abuelos',
+      'gerontecnología, cuidado personas mayores, recordatorios medicación, comunicación familiar, app para abuelos, cuidado a domicilio',
     pages: {
       home: {
         title: 'DiAlgo — Conecta y cuida',
@@ -92,11 +92,21 @@ const es = {
   },
   nav: [
     { label: 'Cómo funciona', href: '/como-funciona' },
-    { label: 'Cuidadores y familias', href: '/para-cuidadores' },
-    { label: 'Personas mayores', href: '/para-personas-mayores' },
-    { label: 'Ciencia', href: '/ciencia' },
-    { label: 'Seguridad', href: '/seguridad' },
-    { label: 'Recursos', href: '/recursos' },
+    {
+      label: 'Para quién',
+      children: [
+        { label: 'Cuidadores y familias', href: '/para-cuidadores' },
+        { label: 'Personas mayores', href: '/para-personas-mayores' },
+      ],
+    },
+    {
+      label: 'Por qué funciona',
+      children: [
+        { label: 'Ciencia y evidencia', href: '/ciencia' },
+        { label: 'Seguridad y privacidad', href: '/seguridad' },
+        { label: 'Recursos y FAQ', href: '/recursos' },
+      ],
+    },
     { label: 'Contacto', href: '/contacto' },
   ],
   headerCta: {
@@ -119,6 +129,12 @@ const es = {
     ],
   },
   home: {
+    targetAudience: [
+      'Familiares y cuidadores de personas mayores.',
+      'Profesionales de atención domiciliaria y servicios sociales.',
+      'Personas mayores tecnófilas o con apoyo familiar.',
+      'Inversores y profesionales interesados en gerontecnología.',
+    ],
     stats: [
       { value: '3', label: 'roles con permisos claros' },
       { value: '2', label: 'modos de interfaz adaptados' },
@@ -190,19 +206,15 @@ const es = {
     steps: [
       {
         title: 'Crea la familia',
-        description: 'Configura el espacio privado, define roles y permisos desde el primer minuto.',
+        description: 'Crea o únete a una familia mediante códigos seguros.',
       },
       {
-        title: 'Invita a cuidadores',
-        description: 'Familiares, profesionales y voluntarios se unen con un enlace seguro.',
+        title: 'Mensajes rápidos',
+        description: 'Envía mensajes con un clic usando botones predefinidos o escribe textos personalizados.',
       },
       {
-        title: 'Activa recordatorios',
-        description: 'Medicaciones, citas y rutinas con notificaciones automáticas y seguimiento.',
-      },
-      {
-        title: 'Comunica y revisa',
-        description: 'Mensajes claros y un historial siempre disponible para la coordinación diaria.',
+        title: 'Control y recordatorios',
+        description: 'Gestiona la medicación y consulta el historial de notificaciones desde un panel seguro.',
       },
     ],
     flow: [
@@ -293,79 +305,34 @@ const es = {
     ],
     references: [
       {
-        title: 'SEGG · Sociedad Española de Geriatría y Gerontología',
-        description: 'Referencia científica en geriatría y gerontología en España.',
-        href: 'https://www.segg.es/',
+        title: 'World report on ageing and health',
+        org: 'World Health Organization (2015)',
+        url: 'https://www.who.int/publications/i/item/9789241565042',
       },
       {
-        title: 'BOE · Ley 39/2006 (Dependencia)',
-        description: 'Marco legal del Sistema para la Autonomía y Atención a la Dependencia.',
-        href: 'https://www.boe.es/buscar/act.php?id=BOE-A-2006-21990',
+        title: 'Gerontechnology',
+        org: 'Revista y recursos introductorios',
+        url: 'https://www.gerontechnology.info/',
       },
       {
-        title: 'Comisión Europea · Impacto del cambio demográfico',
-        description: 'Análisis europeo sobre el envejecimiento y sus implicaciones sociales.',
-        href:
-          'https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/new-push-european-democracy/impact-demographic-change-europe_en',
+        title: 'Intervenciones digitales para reducir la soledad',
+        org: 'Journal of Medical Internet Research (JMIR)',
+        url: 'https://www.jmir.org/',
       },
       {
-        title: 'Comisión Europea · Green Paper on Ageing',
-        description: 'Debate sobre el envejecimiento y la solidaridad entre generaciones.',
-        href:
-          'https://epale.ec.europa.eu/en/resource-centre/content/green-paper-ageing-fostering-solidarity-and-responsibility-between',
+        title: 'Intervenciones para mejorar la adherencia',
+        org: 'Cochrane Library',
+        url: 'https://www.cochranelibrary.com/',
       },
       {
-        title: 'Eurostat · Population structure and ageing',
-        description: 'Datos oficiales sobre estructura demográfica y envejecimiento en la UE.',
-        href:
-          'https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing',
+        title: 'Web Content Accessibility Guidelines (WCAG) 2.1',
+        org: 'W3C (2018)',
+        url: 'https://www.w3.org/WAI/standards-guidelines/wcag/',
       },
       {
-        title: 'AGE Platform Europe',
-        description: 'Red europea de organizaciones que trabajan por los derechos de las personas mayores.',
-        href: 'https://www.age-platform.eu/',
-      },
-    ],
-    referencesInternational: [
-      {
-        title: 'WHO · Ageing and health (fact sheet)',
-        description: 'Síntesis internacional sobre envejecimiento, salud y retos del cuidado.',
-        href: 'https://www.who.int/news-room/fact-sheets/detail/ageing-and-health',
-      },
-      {
-        title: 'WHO · Decade of Healthy Ageing',
-        description: 'Marco global para mejorar la vida de las personas mayores (2021–2030).',
-        href: 'https://www.who.int/initiatives/decade-of-healthy-ageing',
-      },
-      {
-        title: 'WHO · Integrated Care for Older People (ICOPE)',
-        description: 'Guía internacional para cuidados integrados centrados en la persona.',
-        href: 'https://www.who.int/publications/i/item/9789241515993',
-      },
-      {
-        title: 'International Society for Gerontechnology',
-        description: 'Sociedad internacional dedicada a la gerontecnología.',
-        href: 'https://www.gerontechnology.org/',
-      },
-      {
-        title: 'Journal of Gerontechnology (Aim & Scope)',
-        description: 'Publicaciones científicas sobre tecnología aplicada al envejecimiento.',
-        href: 'https://journal.gerontechnology.org/Aim.aspx',
-      },
-      {
-        title: 'BMC Geriatrics · Intervenciones tecnológicas para cuidadores',
-        description: 'Revisión y metaanálisis sobre tecnologías que reducen la carga del cuidador.',
-        href: 'https://bmcgeriatr.biomedcentral.com/articles/10.1186/s12877-024-05018-w',
-      },
-      {
-        title: 'Systematic Reviews · e-Health y envejecimiento saludable',
-        description: 'Revisión sistemática sobre intervenciones e‑health en mayores.',
-        href: 'https://systematicreviewsjournal.biomedcentral.com/articles/10.1186/s13643-020-01385-8',
-      },
-      {
-        title: 'BMC Public Health · Adopción de tecnología en mayores',
-        description: 'Revisión integrativa sobre barreras y facilitadores de adopción tecnológica.',
-        href: 'https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-18036-5',
+        title: 'Reglamento General de Protección de Datos (GDPR)',
+        org: 'GDPR Info',
+        url: 'https://gdpr-info.eu/',
       },
     ],
   },
@@ -384,38 +351,6 @@ const es = {
       'Cumplimiento GDPR y consentimiento explícito.',
       'Política de privacidad clara y accesible.',
       'Gestión transparente de permisos y acceso a logs.',
-    ],
-    references: [
-      {
-        title: 'RGPD · Reglamento (UE) 2016/679',
-        description: 'Marco europeo para la protección de datos personales.',
-        href: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
-      },
-      {
-        title: 'LOPDGDD · Ley Orgánica 3/2018',
-        description: 'Adaptación española del RGPD y derechos digitales.',
-        href: 'https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673',
-      },
-      {
-        title: 'AEPD · Agencia Española de Protección de Datos',
-        description: 'Autoridad de control y guías oficiales de privacidad.',
-        href: 'https://www.aepd.es/',
-      },
-      {
-        title: 'Esquema Nacional de Seguridad (ENS)',
-        description: 'Marco de referencia para la seguridad en el sector público español.',
-        href: 'https://ens.ccn.cni.es/es/',
-      },
-      {
-        title: 'RD 1112/2018 · Accesibilidad web',
-        description: 'Normativa española de accesibilidad en el sector público.',
-        href: 'https://www.boe.es/buscar/act.php?id=BOE-A-2018-12699',
-      },
-      {
-        title: 'Directiva (UE) 2019/882 · European Accessibility Act',
-        description: 'Requisitos europeos de accesibilidad para productos y servicios.',
-        href: 'https://eur-lex.europa.eu/eli/dir/2019/882/oj',
-      },
     ],
   },
   resources: {
@@ -467,41 +402,15 @@ const es = {
         answer: 'Claro, nuestro equipo puede acompañarte en una sesión remota.',
       },
     ],
-    references: [
-      {
-        title: 'Comunidad de Madrid · Plan de envejecimiento activo',
-        description: 'Plan regional de prevención de dependencia y envejecimiento activo.',
-        href:
-          'https://www.comunidad.madrid/servicios/servicios-sociales/plan-envejecimiento-activo-prevencion-dependencia-2025',
-      },
-      {
-        title: 'Gobierno de Aragón · Envejecimiento activo',
-        description: 'Programa público para impulsar la participación y autonomía de mayores.',
-        href: 'https://www.aragon.es/-/mayores.-envejecimiento-activo',
-      },
-      {
-        title: 'Junta de Castilla y León · Programa integral',
-        description: 'Servicios y actividades para la prevención de la dependencia.',
-        href:
-          'https://serviciossociales.jcyl.es/web/es/personas-mayores/programa-integral-envejecimiento-activo.html',
-      },
-      {
-        title: 'Seguridad Social · Prestaciones y pensiones',
-        description: 'Información oficial sobre prestaciones y derechos de las personas mayores.',
-        href: 'https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964',
-      },
-    ],
   },
   contact: {
     title: 'Contacto',
     subtitle: 'Cuéntanos tu caso. Respondemos en menos de 24 horas laborables.',
-    email: 'hola@dialgo.app',
+    email: 'dialgo@onmedic.org',
     phone: '+34 900 123 456',
     address: 'Barcelona · Madrid · Remoto',
     channels: [
-      { label: 'Soporte', value: 'soporte@dialgo.app' },
-      { label: 'Prensa', value: 'prensa@dialgo.app' },
-      { label: 'Colaboraciones', value: 'alianzas@dialgo.app' },
+      { label: 'General', value: 'dialgo@onmedic.org' },
     ],
   },
   docs: {
@@ -511,8 +420,10 @@ const es = {
     stack: [
       'Astro + componentes UI (Preact).',
       'Firebase Auth + Realtime Database.',
-      'Notificaciones push vía Expo Push API.',
+      'Notificaciones push (Expo/Flutter).',
       'Cloud Functions para lógica sensible.',
+      'CI/CD: GitHub Actions.',
+      'Hosting: GitHub Pages (Sitio estático).',
     ],
     architecture: [
       {
@@ -565,6 +476,10 @@ const es = {
   download: {
     title: 'Descarga y demo',
     subtitle: 'DiAlgo está en beta privada. Solicita acceso y agenda una demo guiada.',
+    appStores: {
+      ios: 'https://apps.apple.com/app/dialgo/idPLACEHOLDER',
+      android: 'https://play.google.com/store/apps/details?id=PLACEHOLDER',
+    },
     options: [
       {
         title: 'Demo guiada',
@@ -641,7 +556,7 @@ const es = {
         {
           title: 'Derechos de las personas usuarias',
           content:
-            'Puedes solicitar acceso, rectificación o eliminación de tus datos escribiendo a privacidad@dialgo.app.',
+            'Puedes solicitar acceso, rectificación o eliminación de tus datos escribiendo a dialgo@onmedic.org.',
         },
       ],
     },
@@ -674,24 +589,25 @@ const es = {
         ],
       },
       {
-        title: 'Recursos',
+        title: 'Por qué funciona',
         links: [
+          { label: 'Ciencia y evidencia', href: '/ciencia' },
+          { label: 'Seguridad y privacidad', href: '/seguridad' },
           { label: 'Recursos y FAQ', href: '/recursos' },
-          { label: 'Ciencia', href: '/ciencia' },
-          { label: 'Documentación técnica', href: '/docs' },
-          { label: 'Noticias', href: '/blog' },
         ],
       },
       {
-        title: 'Legal',
+        title: 'Más',
         links: [
+          { label: 'Documentación', href: '/docs' },
+          { label: 'Noticias', href: '/blog' },
           { label: 'Aviso legal', href: '/legal/aviso-legal' },
           { label: 'Privacidad', href: '/legal/privacidad' },
           { label: 'Cookies', href: '/legal/cookies' },
         ],
       },
     ],
-    social: [{ label: 'Email', href: 'mailto:hola@dialgo.app' }],
+    social: [{ label: 'Email', href: 'mailto:dialgo@onmedic.org' }],
   },
 };
 

@@ -8,7 +8,12 @@ const site = getSite(locale);
 const meta = site.meta?.pages?.blog;
 const isSpanish = locale === 'es';
 ---
-<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+<BaseLayout
+  locale={locale}
+  pageTitle={meta?.title}
+  pageDescription={meta?.description}
+  breadcrumbs={[{ label: 'Noticias' }]}
+>
   {isSpanish && (
     <section class="section">
       <div class="container">

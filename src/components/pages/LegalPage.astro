@@ -11,10 +11,23 @@ const metaMap = {
   privacy: site.meta?.pages?.privacy,
   cookies: site.meta?.pages?.cookies,
 };
+const breadcrumbLabels = {
+  notice: 'Aviso legal',
+  privacy: 'Privacidad',
+  cookies: 'Cookies',
+};
 const meta = metaMap[legalKey];
 const isSpanish = locale === 'es';
 ---
-<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+<BaseLayout
+  locale={locale}
+  pageTitle={meta?.title}
+  pageDescription={meta?.description}
+  breadcrumbs={[
+    { label: 'Legal', href: '/legal/aviso-legal' },
+    { label: breadcrumbLabels[legalKey] },
+  ]}
+>
   {isSpanish && (
     <section class="section">
       <div class="container">

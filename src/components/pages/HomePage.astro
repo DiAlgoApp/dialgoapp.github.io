@@ -21,8 +21,29 @@ const isSpanish = locale === 'es';
     <>
       <Hero hero={site.hero} locale={locale} />
 
-      {site.home?.stats && (
+      {site.home?.targetAudience && (
         <section class="section section--soft">
+          <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">¿Para quién es DiAlgo?</h2>
+            <div class="grid grid-4" style="text-align: center;">
+              {site.home.targetAudience.map((audience, index) => (
+                <div class="reveal" style={`--delay: ${index * 80}ms;`}>
+                  <div style="width: 48px; height: 48px; background: rgba(15,118,110,0.1); border-radius: 50%; margin: 0 auto 16px; display: grid; place-items: center; color: var(--primary);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <p style="font-weight: 500;">{audience}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {site.home?.stats && (
+        <section class="section">
           <div class="container">
             <SectionHeading
               eyebrow="Impacto inmediato"
@@ -73,7 +94,7 @@ const isSpanish = locale === 'es';
             <SectionHeading
               eyebrow="Cómo funciona"
               title="Un flujo simple, claro y seguro"
-              subtitle="Desde el registro hasta la comunicación diaria en cuatro pasos."
+              subtitle="Desde el registro hasta la comunicación diaria en tres pasos simples."
             />
             <div class="grid grid-2" style="align-items: start;">
               <StepsTimeline steps={site.howItWorks.steps} />

@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite } from '../../data/site';
 import SectionHeading from '../SectionHeading.astro';
 import CardGrid from '../CardGrid.astro';
-import ReferenceGrid from '../ReferenceGrid.astro';
+import References from '../References.astro';
 import CTA from '../CTA.astro';
 
 const { locale = 'es' } = Astro.props;
@@ -11,7 +11,15 @@ const site = getSite(locale);
 const meta = site.meta?.pages?.science;
 const isSpanish = locale === 'es';
 ---
-<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+<BaseLayout
+  locale={locale}
+  pageTitle={meta?.title}
+  pageDescription={meta?.description}
+  breadcrumbs={[
+    { label: 'Por qué funciona', href: '/ciencia' },
+    { label: 'Ciencia y evidencia' },
+  ]}
+>
   {isSpanish && (
     <>
       <section class="section">
@@ -33,35 +41,10 @@ const isSpanish = locale === 'es';
             subtitle="Referencias clave para el diseño centrado en la persona mayor."
           />
           <CardGrid items={site.science?.evidence} />
-          <div class="callout" style="margin-top: 32px;">
-            <h3>Referencias adicionales</h3>
-            <p class="muted">
-              Estamos preparando un repositorio de estudios y guías con enlaces verificados. Si quieres
-              colaborar, escríbenos.
-            </p>
+          <div style="margin-top: 48px;">
+             <h3 class="section-header" style="margin-bottom: 24px;">Referencias y recursos</h3>
+             <References items={site.science?.references} />
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <SectionHeading
-            eyebrow="Referencias"
-            title="Referencias España y Unión Europea"
-            subtitle="Fuentes oficiales y marcos de referencia con foco en España y la UE."
-          />
-          <ReferenceGrid items={site.science?.references} badgeLabel="ES / UE" />
-        </div>
-      </section>
-
-      <section class="section section--soft">
-        <div class="container">
-          <SectionHeading
-            eyebrow="Bibliografía internacional"
-            title="Estudios y artículos en inglés"
-            subtitle="Resumen en español y enlace a la fuente original en inglés."
-          />
-          <ReferenceGrid items={site.science?.referencesInternational} badgeLabel="EN" />
         </div>
       </section>
 

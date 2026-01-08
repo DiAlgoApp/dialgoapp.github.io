@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite } from '../../data/site';
 import SectionHeading from '../SectionHeading.astro';
 import ListStack from '../ListStack.astro';
-import ReferenceGrid from '../ReferenceGrid.astro';
 import CTA from '../CTA.astro';
 
 const { locale = 'es' } = Astro.props;
@@ -11,7 +10,15 @@ const site = getSite(locale);
 const meta = site.meta?.pages?.security;
 const isSpanish = locale === 'es';
 ---
-<BaseLayout locale={locale} pageTitle={meta?.title} pageDescription={meta?.description}>
+<BaseLayout
+  locale={locale}
+  pageTitle={meta?.title}
+  pageDescription={meta?.description}
+  breadcrumbs={[
+    { label: 'Por qué funciona', href: '/ciencia' },
+    { label: 'Seguridad y privacidad' },
+  ]}
+>
   {isSpanish && (
     <>
       <section class="section">
@@ -55,17 +62,6 @@ const isSpanish = locale === 'es';
               <p class="muted">Permisos por rol y auditoría de accesos en cada familia.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <SectionHeading
-            eyebrow="Normativa"
-            title="Referencias legales y estándares"
-            subtitle="Marco europeo y español para protección de datos y accesibilidad."
-          />
-          <ReferenceGrid items={site.security?.references} badgeLabel="Norma" />
         </div>
       </section>
 
