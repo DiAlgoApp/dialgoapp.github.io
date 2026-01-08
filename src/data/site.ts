@@ -293,39 +293,37 @@ const es = {
     ],
     references: [
       {
-        title: 'OMS · Envejecimiento y salud',
-        description: 'Panorama global sobre envejecimiento, salud y necesidades de cuidado.',
-        href: 'https://www.who.int/news-room/fact-sheets/detail/ageing-and-health',
+        title: 'SEGG · Sociedad Española de Geriatría y Gerontología',
+        description: 'Referencia científica en geriatría y gerontología en España.',
+        href: 'https://www.segg.es/',
       },
       {
-        title: 'OMS · Decenio del Envejecimiento Saludable',
-        description: 'Iniciativa internacional para mejorar la vida de las personas mayores.',
-        href: 'https://www.who.int/initiatives/decade-of-healthy-ageing',
+        title: 'BOE · Ley 39/2006 (Dependencia)',
+        description: 'Marco legal del Sistema para la Autonomía y Atención a la Dependencia.',
+        href: 'https://www.boe.es/buscar/act.php?id=BOE-A-2006-21990',
       },
       {
-        title: 'OMS · ICOPE (atención integrada)',
-        description: 'Guía para cuidados integrados centrados en la persona mayor.',
-        href: 'https://www.who.int/publications/i/item/9789241515993',
+        title: 'Comisión Europea · Impacto del cambio demográfico',
+        description: 'Análisis europeo sobre el envejecimiento y sus implicaciones sociales.',
+        href:
+          'https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/new-push-european-democracy/impact-demographic-change-europe_en',
       },
       {
-        title: 'International Society for Gerontechnology',
-        description: 'Comunidad científica centrada en tecnología para el envejecimiento.',
-        href: 'https://www.gerontechnology.org/',
+        title: 'Comisión Europea · Green Paper on Ageing',
+        description: 'Debate sobre el envejecimiento y la solidaridad entre generaciones.',
+        href:
+          'https://epale.ec.europa.eu/en/resource-centre/content/green-paper-ageing-fostering-solidarity-and-responsibility-between',
       },
       {
-        title: 'Journal of Gerontechnology',
-        description: 'Publicaciones científicas y tendencias en gerontecnología.',
-        href: 'https://journal.gerontechnology.org/Aim.aspx',
+        title: 'Eurostat · Population structure and ageing',
+        description: 'Datos oficiales sobre estructura demográfica y envejecimiento en la UE.',
+        href:
+          'https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing',
       },
       {
-        title: 'WCAG · Accesibilidad web',
-        description: 'Estándares de accesibilidad para interfaces inclusivas.',
-        href: 'https://www.w3.org/WAI/standards-guidelines/wcag/',
-      },
-      {
-        title: 'NCOA · Aging in place',
-        description: 'Recursos prácticos para apoyar la permanencia en el hogar.',
-        href: 'https://www.ncoa.org/aging-in-place/',
+        title: 'AGE Platform Europe',
+        description: 'Red europea de organizaciones que trabajan por los derechos de las personas mayores.',
+        href: 'https://www.age-platform.eu/',
       },
     ],
   },
@@ -344,6 +342,38 @@ const es = {
       'Cumplimiento GDPR y consentimiento explícito.',
       'Política de privacidad clara y accesible.',
       'Gestión transparente de permisos y acceso a logs.',
+    ],
+    references: [
+      {
+        title: 'RGPD · Reglamento (UE) 2016/679',
+        description: 'Marco europeo para la protección de datos personales.',
+        href: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
+      },
+      {
+        title: 'LOPDGDD · Ley Orgánica 3/2018',
+        description: 'Adaptación española del RGPD y derechos digitales.',
+        href: 'https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673',
+      },
+      {
+        title: 'AEPD · Agencia Española de Protección de Datos',
+        description: 'Autoridad de control y guías oficiales de privacidad.',
+        href: 'https://www.aepd.es/',
+      },
+      {
+        title: 'Esquema Nacional de Seguridad (ENS)',
+        description: 'Marco de referencia para la seguridad en el sector público español.',
+        href: 'https://ens.ccn.cni.es/es/',
+      },
+      {
+        title: 'RD 1112/2018 · Accesibilidad web',
+        description: 'Normativa española de accesibilidad en el sector público.',
+        href: 'https://www.boe.es/buscar/act.php?id=BOE-A-2018-12699',
+      },
+      {
+        title: 'Directiva (UE) 2019/882 · European Accessibility Act',
+        description: 'Requisitos europeos de accesibilidad para productos y servicios.',
+        href: 'https://eur-lex.europa.eu/eli/dir/2019/882/oj',
+      },
     ],
   },
   resources: {
@@ -393,6 +423,30 @@ const es = {
       {
         question: '¿Puedo solicitar una demo guiada?',
         answer: 'Claro, nuestro equipo puede acompañarte en una sesión remota.',
+      },
+    ],
+    references: [
+      {
+        title: 'Comunidad de Madrid · Plan de envejecimiento activo',
+        description: 'Plan regional de prevención de dependencia y envejecimiento activo.',
+        href:
+          'https://www.comunidad.madrid/servicios/servicios-sociales/plan-envejecimiento-activo-prevencion-dependencia-2025',
+      },
+      {
+        title: 'Gobierno de Aragón · Envejecimiento activo',
+        description: 'Programa público para impulsar la participación y autonomía de mayores.',
+        href: 'https://www.aragon.es/-/mayores.-envejecimiento-activo',
+      },
+      {
+        title: 'Junta de Castilla y León · Programa integral',
+        description: 'Servicios y actividades para la prevención de la dependencia.',
+        href:
+          'https://serviciossociales.jcyl.es/web/es/personas-mayores/programa-integral-envejecimiento-activo.html',
+      },
+      {
+        title: 'Seguridad Social · Prestaciones y pensiones',
+        description: 'Información oficial sobre prestaciones y derechos de las personas mayores.',
+        href: 'https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964',
       },
     ],
   },

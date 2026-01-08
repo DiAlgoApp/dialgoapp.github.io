@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite } from '../../data/site';
 import SectionHeading from '../SectionHeading.astro';
 import ListStack from '../ListStack.astro';
+import ReferenceGrid from '../ReferenceGrid.astro';
 import CTA from '../CTA.astro';
 
 const { locale = 'es' } = Astro.props;
@@ -54,6 +55,17 @@ const isSpanish = locale === 'es';
               <p class="muted">Permisos por rol y auditoría de accesos en cada familia.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Normativa"
+            title="Referencias legales y estándares"
+            subtitle="Marco europeo y español para protección de datos y accesibilidad."
+          />
+          <ReferenceGrid items={site.security?.references} badgeLabel="Norma" />
         </div>
       </section>
 

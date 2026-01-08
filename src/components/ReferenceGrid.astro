@@ -1,5 +1,5 @@
 ---
-const { items = [] } = Astro.props;
+const { items = [], badgeLabel = 'Referencia' } = Astro.props;
 ---
 {items?.length > 0 && (
   <div class="grid grid-3">
@@ -9,9 +9,9 @@ const { items = [] } = Astro.props;
         style={`--delay: ${index * 80}ms;`}
         href={item.href}
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
       >
-        <span class="badge">Referencia</span>
+        <span class="badge">{badgeLabel}</span>
         <h3 class="card-title">{item.title}</h3>
         <p class="muted">{item.description}</p>
       </a>

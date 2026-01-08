@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSite, withLocalePath } from '../../data/site';
 import SectionHeading from '../SectionHeading.astro';
 import FAQ from '../FAQ.astro';
+import ReferenceGrid from '../ReferenceGrid.astro';
 import CTA from '../CTA.astro';
 
 const { locale = 'es' } = Astro.props;
@@ -42,6 +43,17 @@ const isSpanish = locale === 'es';
             subtitle="Respuestas rápidas a las dudas más comunes."
           />
           <FAQ faq={site.resources?.faq} />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <SectionHeading
+            eyebrow="Enlaces externos"
+            title="Programas y recursos en España"
+            subtitle="Iniciativas públicas y referencias para profundizar en envejecimiento activo."
+          />
+          <ReferenceGrid items={site.resources?.references} badgeLabel="Enlace" />
         </div>
       </section>
 
