@@ -1,0 +1,48 @@
+# DiAlgo (Extended LLM Context)
+
+This file provides additional context for language models.
+
+DiAlgo is a family communication and care coordination project designed for dependent people (such as seniors) and their families. This website supports the DiAlgo app with information about gerontechnology, care coordination features, medication reminders, and links to download the app and access support.
+
+Primary audience: family members, caregivers of dependent people, home care professionals, social services, and individuals interested in gerontechnology.
+
+Languages:
+- Español: `/`
+- English: `/en/`
+
+## Product summary
+
+- App type: Family communication + care coordination
+- Core idea: Help families stay aligned on care tasks, medication intake, and daily notes, with an accessible interface for seniors.
+- Interface modes:
+  - Family mode: Full calendar, message history, roles, and notification controls.
+  - Senior mode: Large buttons, simplified responses, high contrast, and linear navigation.
+
+## Key website pages
+
+- Home: `/` (also `/en/`)
+- How it works: `/como-funciona/` (also `/en/how-it-works/`)
+- For caregivers: `/para-cuidadores/` (also `/en/for-caregivers/`)
+- For dependent people: `/para-personas-dependientes/` (also `/en/for-dependents/`)
+- Science & evidence: `/ciencia/` (also `/en/science/`)
+- Security & privacy: `/seguridad/` (also `/en/security/`)
+- Resources & FAQ: `/recursos/` (also `/en/resources/`)
+- Contact: `/contacto/` (also `/en/contact/`)
+- Download: `/descargar/` (also `/en/download/`)
+
+## Medical disclaimer (important)
+
+DiAlgo content and features are for communication and coordination purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment.
+
+## Evidence approach
+
+DiAlgo incorporates gerontechnology principles to reduce cognitive load on dependent users and facilitate coordination between family members and caregivers.
+
+Key references:
+- World report on ageing and health (WHO, 2015): https://www.who.int/publications/i/item/9789241565042
+- Gerontechnology resources: https://www.gerontechnology.info/
+- Web Content Accessibility Guidelines (WCAG) 2.1: https://www.w3.org/WAI/standards-guidelines/wcag/
+
+## Contact
+
+Email: dialgo@onmedic.org
