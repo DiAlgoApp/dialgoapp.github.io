@@ -27,6 +27,7 @@ Languages:
 - Science & evidence: `/ciencia/` (also `/en/science/`)
 - Security & privacy: `/seguridad/` (also `/en/security/`)
 - Resources & FAQ: `/recursos/` (also `/en/resources/`)
+- Caregiver Guides Blog: `/blog/` (also `/en/blog/`)
 - Contact: `/contacto/` (also `/en/contact/`)
 - Download: `/descargar/` (also `/en/download/`)
 
