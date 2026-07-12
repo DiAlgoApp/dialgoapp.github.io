@@ -1,5 +1,8 @@
 # DiAlgo (Extended LLM Context)
 
+Canonical site: https://dialgoapp.github.io/
+Last updated: 2026-07-12
+
 This file provides additional context for language models.
 
 DiAlgo is a family communication and care coordination project designed for dependent people (such as seniors) and their families. This website supports the DiAlgo app with information about gerontechnology, care coordination features, medication reminders, and links to download the app and access support.
