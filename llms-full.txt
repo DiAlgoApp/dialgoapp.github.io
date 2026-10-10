@@ -11,7 +11,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent 
 
 - App Store: https://apps.apple.com/es/app/dialgo/id6738914468
 - Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
-- App languages: Spanish, Catalan, English.
+- App languages: Spanish and Catalan (not English yet).
 
 ## Features
 
