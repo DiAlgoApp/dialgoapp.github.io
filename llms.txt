@@ -15,7 +15,7 @@ Languages of this site: Español (default, `/`), English (`/en/`). The app itsel
 - For older or dependent people: `/para-personas-dependientes/` (also `/en/for-dependents/`)
 - Science & evidence (with full references and limits): `/ciencia/` (also `/en/science/`)
 - Security & privacy: `/seguridad/` (also `/en/security/`)
-- Guide & FAQ: `/recursos/` (also `/en/resources/`)
+- FAQ: `/recursos/` (also `/en/resources/`)
 - Blog: `/blog/` (also `/en/blog/`)
 - Contact: `/contacto/` (also `/en/contact/`)
 - Download: `/descargar/` (also `/en/download/`)
