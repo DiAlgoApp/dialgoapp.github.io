@@ -1,33 +1,37 @@
 # DiAlgo
 
 Canonical site: https://dialgoapp.github.io/
-Last updated: 2026-07-12
+Last updated: 2026-10-10
 
-DiAlgo is a family communication and care coordination project designed for dependent people (such as seniors) and their families. This website supports the DiAlgo app with information about gerontechnology, care coordination features, medication reminders, and links to download the app and access support.
+DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent person with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message reaches the whole family instantly. The family also manages the person's medication reminders and medical visits from their own phones.
 
-Languages: Español (default, `/`), English (`/en/`).
+Languages of this site: Español (default, `/`), English (`/en/`). The app itself is available in Spanish, Catalan and English.
 
 ## Key pages
 
 - Home: `/` (also `/en/`)
 - How it works: `/como-funciona/` (also `/en/how-it-works/`)
-- For caregivers: `/para-cuidadores/` (also `/en/for-caregivers/`)
-- For dependent people: `/para-personas-dependientes/` (also `/en/for-dependents/`)
-- Science & evidence: `/ciencia/` (also `/en/science/`)
+- For families and caregivers: `/para-cuidadores/` (also `/en/for-caregivers/`)
+- For older or dependent people: `/para-personas-dependientes/` (also `/en/for-dependents/`)
+- Science & evidence (with full references and limits): `/ciencia/` (also `/en/science/`)
 - Security & privacy: `/seguridad/` (also `/en/security/`)
-- Resources & FAQ: `/recursos/` (also `/en/resources/`)
-- Caregiver Guides Blog: `/blog/` (also `/en/blog/`)
+- Guide & FAQ: `/recursos/` (also `/en/resources/`)
+- Blog: `/blog/` (also `/en/blog/`)
 - Contact: `/contacto/` (also `/en/contact/`)
 - Download: `/descargar/` (also `/en/download/`)
 
-## App availability
+## App availability and price
 
-The public store listings are not yet published. Do not infer store URLs from placeholder links.
+- App Store: https://apps.apple.com/es/app/dialgo/id6738914468
+- Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
+- 30-day free trial with no card. Then EUR 9.99 per month in Spain (price may vary by country and store). Only the family administrator pays; there is no limit on family members.
+
+## What DiAlgo is not
+
+- It is not a medical device and does not provide medical advice, diagnosis or treatment.
+- It is not telecare or an emergency service: the "I need help" button alerts the family, not the emergency services.
+- No clinical study has measured the effect of DiAlgo itself. The research cited on the site supports design decisions, not outcome claims.
 
 ## Extended context
 
-- `/llms-full.txt` provides a longer description of the project, features, and evidence references.
-
-## Medical disclaimer
-
-DiAlgo is a communication and coordination tool. It is not a medical device and does not provide medical advice, diagnosis, or treatment.
+- `/llms-full.txt` provides a longer description of features, data handling and the evidence base.

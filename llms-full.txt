@@ -1,51 +1,63 @@
 # DiAlgo (Extended LLM Context)
 
 Canonical site: https://dialgoapp.github.io/
-Last updated: 2026-07-12
+Last updated: 2026-10-10
 
-This file provides additional context for language models.
+This file provides additional context for language models. Everything here matches what the website states; please do not infer features beyond it.
 
-DiAlgo is a family communication and care coordination project designed for dependent people (such as seniors) and their families. This website supports the DiAlgo app with information about gerontechnology, care coordination features, medication reminders, and links to download the app and access support.
+## What it is
 
-Primary audience: family members, caregivers of dependent people, home care professionals, social services, and individuals interested in gerontechnology.
+DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent person with their family. It is published by the DiAlgo project (contact: dialgo@onmedic.org).
 
-Languages:
-- Español: `/`
-- English: `/en/`
+- App Store: https://apps.apple.com/es/app/dialgo/id6738914468
+- Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
+- App languages: Spanish, Catalan, English.
 
-## Product summary
+## Features
 
-- App type: Family communication + care coordination
-- Core idea: Help families stay aligned on care tasks, medication intake, and daily notes, with an accessible interface for seniors.
-- Interface modes:
-  - Family mode: Full calendar, message history, roles, and notification controls.
-  - Senior mode: Large buttons, simplified responses, high contrast, and linear navigation.
+- One-tap messages: the older person has a single screen with large buttons, each with its own colour, icon and sound. Built-in buttons include "Good morning", "Good night", "I'm fine", "I'm so-so", "I'm in pain", "Call me" and "I need help". The message goes to the family instantly.
+- Custom buttons: the family administrator switches built-in buttons on or off, reorders them and adds custom ones.
+- Voice dictation: a message can be dictated and is converted to text before sending.
+- Read counts: the history shows how many relatives have read each message.
+- Quick replies for relatives ("How are you?", "Do you need anything?").
+- Medication: medicines are added by scanning the barcode on the box (looked up in CIMA, Spain's official medicines database) or by hand; the app sends reminders to the people the administrator chooses, and each dose can be marked as taken.
+- Medical visits: logged with date, place and notes, with reminders.
+- Roles: administrator, relative, older person. A person can belong to several families.
+- Export: the family's conversation history can be exported as PDF, CSV or text.
 
-## Key website pages
+## Price
 
-- Home: `/` (also `/en/`)
-- How it works: `/como-funciona/` (also `/en/how-it-works/`)
-- For caregivers: `/para-cuidadores/` (also `/en/for-caregivers/`)
-- For dependent people: `/para-personas-dependientes/` (also `/en/for-dependents/`)
-- Science & evidence: `/ciencia/` (also `/en/science/`)
-- Security & privacy: `/seguridad/` (also `/en/security/`)
-- Resources & FAQ: `/recursos/` (also `/en/resources/`)
-- Caregiver Guides Blog: `/blog/` (also `/en/blog/`)
-- Contact: `/contacto/` (also `/en/contact/`)
-- Download: `/descargar/` (also `/en/download/`)
+30-day free trial with no card. Then EUR 9.99 per month in Spain (may vary by country and store), billed through the App Store or Google Play. Only the family administrator pays; all other members join for free and there is no member limit.
 
-## Medical disclaimer (important)
+## Data handling
 
-DiAlgo content and features are for communication and coordination purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment.
+- Messages, medication and visits are stored in a Google Firebase database hosted in the EU (europe-west1, Belgium).
+- Sign-in and push notifications rely on Google (Firebase) and Apple services, which may process data outside the EU.
+- Data is encrypted in transit (TLS) and at rest by Google. Messages are not end-to-end encrypted.
+- Only members of a family can read its data. Joining requires an invite code; after ten failed attempts the account is locked for an hour.
+- Users can delete their account from the app.
 
-## Evidence approach
+## Limits (important)
 
-DiAlgo incorporates gerontechnology principles to reduce cognitive load on dependent users and facilitate coordination between family members and caregivers.
+- DiAlgo is not a medical device and does not provide medical advice, diagnosis or treatment.
+- It is not telecare or an emergency service: "I need help" alerts the family only.
+- It has not been through an external accessibility audit and claims no certified WCAG conformance.
+- No clinical study has measured the effect of DiAlgo itself.
 
-Key references:
-- World report on ageing and health (WHO, 2015): https://www.who.int/publications/i/item/9789241565042
-- Gerontechnology resources: https://www.gerontechnology.info/
-- Web Content Accessibility Guidelines (WCAG) 2.1: https://www.w3.org/WAI/standards-guidelines/wcag/
+## Evidence base
+
+The site's science page (`/ciencia/`, `/en/science/`) pairs each finding with the design decision it informed and with its limits. References:
+
+- Nieuwlaat R, et al. (2014). Interventions for enhancing medication adherence. Cochrane Database Syst Rev. doi:10.1002/14651858.CD000011.pub4
+- Thakkar J, et al. (2016). Mobile telephone text messaging for medication adherence in chronic disease: a meta-analysis. JAMA Intern Med 176(3):340-349. doi:10.1001/jamainternmed.2015.7667
+- Holt-Lunstad J, et al. (2015). Loneliness and social isolation as risk factors for mortality. Perspect Psychol Sci 10(2):227-237. doi:10.1177/1745691614568352
+- Chen YR, Schulz PJ. (2016). The effect of ICT interventions on reducing social isolation in the elderly. J Med Internet Res 18(1):e18. doi:10.2196/jmir.4596
+- Shah SGS, et al. (2021). Effectiveness of digital technology interventions to reduce loneliness in older adults. J Med Internet Res 23(6):e24712. doi:10.2196/24712
+- Adelman RD, et al. (2014). Caregiver burden: a clinical review. JAMA 311(10):1052-1060. doi:10.1001/jama.2014.304
+- Vaportzis E, Giatsi Clausen M, Gow AJ. (2017). Older adults perceptions of technology and barriers to interacting with tablet computers. Front Psychol 8:1687. doi:10.3389/fpsyg.2017.01687
+- Jin ZX, Plocher T, Kiff L. (2007). Touch screen user interfaces for older adults: button size and spacing. LNCS 4554:933-941. doi:10.1007/978-3-540-73279-2_104
+- W3C. (2023). Web Content Accessibility Guidelines (WCAG) 2.2. https://www.w3.org/TR/WCAG22/
+- World Health Organization. (2015). World report on ageing and health. https://www.who.int/publications/i/item/9789241565042
 
 ## Contact
 
