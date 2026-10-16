@@ -1,6 +1,6 @@
 # DiAlgo
 
-Canonical site: https://dialgoapp.github.io/
+Canonical site: https://dialgo.net/
 Last updated: 2026-10-10
 
 DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent person with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message reaches the whole family instantly. The family also manages the person's medication reminders and medical visits from their own phones.

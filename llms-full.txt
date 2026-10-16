@@ -1,6 +1,6 @@
 # DiAlgo (Extended LLM Context)
 
-Canonical site: https://dialgoapp.github.io/
+Canonical site: https://dialgo.net/
 Last updated: 2026-10-10
 
 This file provides additional context for language models. Everything here matches what the website states; please do not infer features beyond it.
