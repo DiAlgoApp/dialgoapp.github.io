@@ -7,11 +7,11 @@ This file provides additional context for language models. Everything here match
 
 ## What it is
 
-DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent person with their family. It is published by the DiAlgo project (contact: dialgo@onmedic.org).
+DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. It is published by the DiAlgo project (contact: dialgo@onmedic.org).
 
 - App Store: https://apps.apple.com/es/app/dialgo/id6738914468
 - Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
-- App languages: Spanish and Catalan (not English yet).
+- App languages: English, Spanish and Catalan.
 
 ## Features
 
@@ -21,7 +21,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent 
 - Read counts: the history shows how many relatives have read each message.
 - Quick replies for relatives ("How are you?", "Do you need anything?").
 - Medication: medicines are added by scanning the barcode on the box (looked up in CIMA, Spain's official medicines database) or by hand; the app sends reminders to the people the administrator chooses, and each dose can be marked as taken.
-- Medical visits: logged with date, place and notes, with reminders.
+- Medical appointments: logged with date, place and notes, with reminders.
 - Roles: administrator, relative, older person. A person can belong to several families.
 - Export: the family's conversation history can be exported as PDF, CSV or text.
 

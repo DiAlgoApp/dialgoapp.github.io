@@ -3,16 +3,16 @@
 Canonical site: https://dialgo.net/
 Last updated: 2026-10-10
 
-DiAlgo is a mobile app (iPhone and Android) that connects an older or dependent person with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message reaches the whole family instantly. The family also manages the person's medication reminders and medical visits from their own phones.
+DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message reaches the whole family instantly. The family also manages the person's medication reminders and medical appointments from their own phones.
 
-Languages of this site: Español (default, `/`), English (`/en/`). The app itself is available in Spanish and Catalan (not English yet).
+Languages of this site: Español (default, `/`), English (`/en/`), and the main Catalan pages (`/ca/`). The app itself is available in English, Spanish and Catalan.
 
 ## Key pages
 
 - Home: `/` (also `/en/`)
 - How it works: `/como-funciona/` (also `/en/how-it-works/`)
 - For families and caregivers: `/para-cuidadores/` (also `/en/for-caregivers/`)
-- For older or dependent people: `/para-personas-dependientes/` (also `/en/for-dependents/`)
+- For older adults and people who need support: `/para-personas-dependientes/` (also `/en/for-dependents/`)
 - Science & evidence (with full references and limits): `/ciencia/` (also `/en/science/`)
 - Security & privacy: `/seguridad/` (also `/en/security/`)
 - FAQ: `/recursos/` (also `/en/resources/`)
