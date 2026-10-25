@@ -3,9 +3,9 @@
 Canonical site: https://dialgo.net/
 Last updated: 2026-10-10
 
-DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message reaches the whole family instantly. The family also manages the person's medication reminders and medical appointments from their own phones.
+DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message is shared with the whole family. The family also manages the person's medication reminders and medical appointments from their own phones.
 
-Languages of this site: Español (default, `/`), English (`/en/`), and the main Catalan pages (`/ca/`). The app itself is available in English, Spanish and Catalan.
+Languages of this site: Español (default, `/`), English (`/en/`), and Catalan (`/ca/`), with all public pages and articles available in the three languages. The app itself is available in English, Spanish and Catalan.
 
 ## Key pages
 
@@ -24,7 +24,7 @@ Languages of this site: Español (default, `/`), English (`/en/`), and the main 
 
 - App Store: https://apps.apple.com/es/app/dialgo/id6738914468
 - Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
-- 30-day free trial with no card. Then EUR 9.99 per month in Spain (price may vary by country and store). Only the family administrator pays; there is no limit on family members.
+- 30-day free trial with no card. Then EUR 6.99 per month in Spain (price may vary by country and store). Only the family administrator pays; there is no limit on family members.
 
 ## What DiAlgo is not
 

@@ -15,7 +15,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older adult or pers
 
 ## Features
 
-- One-tap messages: the older person has a single screen with large buttons, each with its own colour, icon and sound. Built-in buttons include "Good morning", "Good night", "I'm fine", "I'm so-so", "I'm in pain", "Call me" and "I need help". The message goes to the family instantly.
+- One-tap messages: the older person has a single screen with large buttons, each with its own colour, icon and sound. Built-in buttons include "Good morning", "Good night", "I'm fine", "I'm so-so", "I'm in pain", "Call me" and "I need help". The message is shared with the family; phone alerts depend on connectivity and notification permissions.
 - Custom buttons: the family administrator switches built-in buttons on or off, reorders them and adds custom ones.
 - Voice dictation: a message can be dictated and is converted to text before sending.
 - Read counts: the history shows how many relatives have read each message.
@@ -27,7 +27,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older adult or pers
 
 ## Price
 
-30-day free trial with no card. Then EUR 9.99 per month in Spain (may vary by country and store), billed through the App Store or Google Play. Only the family administrator pays; all other members join for free and there is no member limit.
+30-day free trial with no card. Then EUR 6.99 per month in Spain (may vary by country and store), billed through the App Store or Google Play. Only the family administrator pays; all other members join for free and there is no member limit.
 
 ## Data handling
 
