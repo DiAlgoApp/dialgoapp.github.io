@@ -27,7 +27,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older adult or pers
 
 ## Price
 
-30-day free trial with no card. Then EUR 6.99 per month in Spain (may vary by country and store), billed through the App Store or Google Play. Only the family administrator pays; all other members join for free and there is no member limit.
+14-day free trial with no card. Then EUR 6.99 per month in Spain (may vary by country and store), billed through the App Store or Google Play. Only the family administrator pays; all other members join for free and there is no member limit.
 
 ## Data handling
 

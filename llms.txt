@@ -24,7 +24,7 @@ Languages of this site: Español (default, `/`), English (`/en/`), and Catalan (
 
 - App Store: https://apps.apple.com/es/app/dialgo/id6738914468
 - Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
-- 30-day free trial with no card. Then EUR 6.99 per month in Spain (price may vary by country and store). Only the family administrator pays; there is no limit on family members.
+- 14-day free trial with no card. Then EUR 6.99 per month in Spain (price may vary by country and store). Only the family administrator pays; there is no limit on family members.
 
 ## What DiAlgo is not
 
