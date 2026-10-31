@@ -1,37 +1,44 @@
 # DiAlgo
 
+> DiAlgo (dialgo.net) is a mobile app for iPhone and Android that connects an older or dependent person with their family: the person taps one of a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and the message reaches the whole family, who also share medication reminders and medical appointments. It is published by ArnoHealth S.L. (onmedic), Barcelona, Spain. It is not related to the domain dialgo.com.
+
 Canonical site: https://dialgo.net/
-Last updated: 2026-10-10
-
-DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. The older person sees one screen with a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and taps one; the message is shared with the whole family. The family also manages the person's medication reminders and medical appointments from their own phones.
-
-Languages of this site: Español (default, `/`), English (`/en/`), and Catalan (`/ca/`), with all public pages and articles available in the three languages. The app itself is available in English, Spanish and Catalan.
+Last updated: 2026-10-31
+Publisher: ArnoHealth S.L. (onmedic, https://onmedic.com/), founded by Albert Arnó (https://albertarno.net/about/)
+Languages: Spanish (default, `/`), Catalan (`/ca/`) and English (`/en/`). The app is available in the same three languages.
 
 ## Key pages
 
-- Home: `/` (also `/en/`)
-- How it works: `/como-funciona/` (also `/en/how-it-works/`)
-- For families and caregivers: `/para-cuidadores/` (also `/en/for-caregivers/`)
-- For older adults and people who need support: `/para-personas-dependientes/` (also `/en/for-dependents/`)
-- Science & evidence (with full references and limits): `/ciencia/` (also `/en/science/`)
-- Security & privacy: `/seguridad/` (also `/en/security/`)
-- FAQ: `/recursos/` (also `/en/resources/`)
-- Blog: `/blog/` (also `/en/blog/`)
-- Contact: `/contacto/` (also `/en/contact/`)
-- Download: `/descargar/` (also `/en/download/`)
+- [Home](https://dialgo.net/): what DiAlgo is and who it is for ([CA](https://dialgo.net/ca/), [EN](https://dialgo.net/en/))
+- [How it works](https://dialgo.net/como-funciona/): buttons, family replies, medication and appointments ([CA](https://dialgo.net/ca/com-funciona/), [EN](https://dialgo.net/en/how-it-works/))
+- [For families and caregivers](https://dialgo.net/para-cuidadores/) ([CA](https://dialgo.net/ca/per-a-families/), [EN](https://dialgo.net/en/for-caregivers/))
+- [For older and dependent people](https://dialgo.net/para-personas-dependientes/) ([CA](https://dialgo.net/ca/per-a-persones-grans/), [EN](https://dialgo.net/en/for-dependents/))
+- [For care providers](https://dialgo.net/para-centros/): home-care services, day centres and family-support organisations: DiAlgo with their branding, or an app adapted to their service, agreed in writing ([CA](https://dialgo.net/ca/per-a-centres/), [EN](https://dialgo.net/en/for-care-providers/))
+- [Science and evidence](https://dialgo.net/ciencia/): each cited finding with its source and limits ([CA](https://dialgo.net/ca/ciencia/), [EN](https://dialgo.net/en/science/))
+- [Security and privacy](https://dialgo.net/seguridad/) ([CA](https://dialgo.net/ca/seguretat/), [EN](https://dialgo.net/en/security/))
+- [FAQ](https://dialgo.net/recursos/) ([CA](https://dialgo.net/ca/recursos/), [EN](https://dialgo.net/en/resources/))
+- [Download, trial and price](https://dialgo.net/descargar/) ([CA](https://dialgo.net/ca/descarregar/), [EN](https://dialgo.net/en/download/))
+- [Contact](https://dialgo.net/contacto/) ([CA](https://dialgo.net/ca/contacte/), [EN](https://dialgo.net/en/contact/))
+
+## Articles
+
+- [Telecare and family communication apps: what each one offers](https://dialgo.net/en/blog/telecare-vs-communication-apps/) ([ES](https://dialgo.net/blog/teleasistencia-vs-apps-comunicacion/), [CA](https://dialgo.net/ca/blog/teleassistencia-vs-apps-comunicacio/))
+- [Apps for caregivers of older adults: how to choose a suitable one](https://dialgo.net/en/blog/apps-caregivers-older-adults/) ([ES](https://dialgo.net/blog/apps-cuidadores-personas-mayores/), [CA](https://dialgo.net/ca/blog/apps-cuidadors-persones-grans/))
+- [How to communicate with a person with dementia](https://dialgo.net/en/blog/how-to-communicate-dementia/) ([ES](https://dialgo.net/blog/como-comunicarse-persona-demencia/), [CA](https://dialgo.net/ca/blog/com-comunicar-se-persona-demencia/))
+- [How to organise a relative's care and share the responsibility](https://dialgo.net/en/blog/how-to-organize-dependent-relative-care/) ([ES](https://dialgo.net/blog/como-organizar-cuidado-familiar-dependiente/), [CA](https://dialgo.net/ca/blog/com-organitzar-cura-familiar-dependent/))
 
 ## App availability and price
 
-- App Store: https://apps.apple.com/es/app/dialgo/id6738914468
-- Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
-- 14-day free trial with no card. Then EUR 6.99 per month in Spain (price may vary by country and store). Only the family administrator pays; there is no limit on family members.
+- [App Store](https://apps.apple.com/es/app/dialgo/id6738914468)
+- [Google Play](https://play.google.com/store/apps/details?id=com.arnohealth.dialgo)
+- 14-day free trial with no card, then EUR 6.99 per month in Spain (the price may vary by country and store). Only the family administrator pays; there is no limit on family members. Store listing texts may still show older figures until the next app release; this site is current.
 
 ## What DiAlgo is not
 
 - It is not a medical device and does not provide medical advice, diagnosis or treatment.
-- It is not telecare or an emergency service: the "I need help" button alerts the family, not the emergency services.
+- It is not telecare or an emergency service: the "I need help" button alerts the family, not the emergency services. It does not locate the person or detect falls.
 - No clinical study has measured the effect of DiAlgo itself. The research cited on the site supports design decisions, not outcome claims.
 
-## Extended context
+## Optional
 
-- `/llms-full.txt` provides a longer description of features, data handling and the evidence base.
+- [Extended context](https://dialgo.net/llms-full.txt): features, data handling and the full evidence base.

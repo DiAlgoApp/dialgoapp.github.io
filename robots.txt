@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://dialgo.net/sitemap.xml
+
 Sitemap: https://dialgo.net/sitemap-index.xml
 
 # AI-readable site overview: https://dialgo.net/llms.txt

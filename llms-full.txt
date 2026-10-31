@@ -1,13 +1,13 @@
 # DiAlgo (Extended LLM Context)
 
 Canonical site: https://dialgo.net/
-Last updated: 2026-10-10
+Last updated: 2026-10-31
 
 This file provides additional context for language models. Everything here matches what the website states; please do not infer features beyond it.
 
 ## What it is
 
-DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. It is published by the DiAlgo project (contact: dialgo@onmedic.org).
+DiAlgo is a mobile app (iPhone and Android) that connects an older adult or person who needs support with their family. It is published by ArnoHealth S.L. (onmedic, https://onmedic.com/), Gran Via de les Corts Catalanes 699, 08013 Barcelona, Spain, founded by Albert Arnó (https://albertarno.net/about/). Contact: dialgo@onmedic.org. DiAlgo is not related to the domain dialgo.com.
 
 - App Store: https://apps.apple.com/es/app/dialgo/id6738914468
 - Google Play: https://play.google.com/store/apps/details?id=com.arnohealth.dialgo
@@ -23,6 +23,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older adult or pers
 - Medication: medicines are added by scanning the barcode on the box (looked up in CIMA, Spain's official medicines database) or by hand; the app sends reminders to the people the administrator chooses, and each dose can be marked as taken.
 - Medical appointments: logged with date, place and notes, with reminders.
 - Roles: administrator, relative, older person. A person can belong to several families.
+- Care providers: home-care services, day centres and family-support organisations can offer DiAlgo with their branding, or commission an app adapted to their service; scope and terms are agreed in writing (see https://dialgo.net/para-centros/).
 - Export: the family's conversation history can be exported as PDF, CSV or text.
 
 ## Price
@@ -46,7 +47,7 @@ DiAlgo is a mobile app (iPhone and Android) that connects an older adult or pers
 
 ## Evidence base
 
-The site's science page (`/ciencia/`, `/en/science/`) pairs each finding with the design decision it informed and with its limits. References:
+The site's science page (https://dialgo.net/ciencia/, https://dialgo.net/ca/ciencia/, https://dialgo.net/en/science/) pairs each finding with the design decision it informed and with its limits. References:
 
 - Nieuwlaat R, et al. (2014). Interventions for enhancing medication adherence. Cochrane Database Syst Rev. doi:10.1002/14651858.CD000011.pub4
 - Thakkar J, et al. (2016). Mobile telephone text messaging for medication adherence in chronic disease: a meta-analysis. JAMA Intern Med 176(3):340-349. doi:10.1001/jamainternmed.2015.7667
