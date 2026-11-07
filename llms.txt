@@ -26,6 +26,7 @@ Languages: Spanish (default, `/`), Catalan (`/ca/`) and English (`/en/`). The ap
 - [Apps for caregivers of older adults: how to choose a suitable one](https://dialgo.net/en/blog/apps-caregivers-older-adults/) ([ES](https://dialgo.net/blog/apps-cuidadores-personas-mayores/), [CA](https://dialgo.net/ca/blog/apps-cuidadors-persones-grans/))
 - [How to communicate with a person with dementia](https://dialgo.net/en/blog/how-to-communicate-dementia/) ([ES](https://dialgo.net/blog/como-comunicarse-persona-demencia/), [CA](https://dialgo.net/ca/blog/com-comunicar-se-persona-demencia/))
 - [How to organise a relative's care and share the responsibility](https://dialgo.net/en/blog/how-to-organize-dependent-relative-care/) ([ES](https://dialgo.net/blog/como-organizar-cuidado-familiar-dependiente/), [CA](https://dialgo.net/ca/blog/com-organitzar-cura-familiar-dependent/))
+- [Older adults living alone: how to know they are OK without taking away their independence](https://dialgo.net/en/blog/older-adults-living-alone/) ([ES](https://dialgo.net/blog/personas-mayores-que-viven-solas/), [CA](https://dialgo.net/ca/blog/persones-grans-que-viuen-soles/))
 
 ## App availability and price
 
