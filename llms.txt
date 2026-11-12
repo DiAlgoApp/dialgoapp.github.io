@@ -3,7 +3,7 @@
 > DiAlgo (dialgo.net) is a mobile app for iPhone and Android that connects an older or dependent person with their family: the person taps one of a few large buttons ("Good morning", "I'm fine", "Call me", "I need help") and the message reaches the whole family, who also share medication reminders and medical appointments. It is published by ArnoHealth S.L. (onmedic), Barcelona, Spain. It is not related to the domain dialgo.com.
 
 Canonical site: https://dialgo.net/
-Last updated: 2026-10-31
+Last updated: 2026-11-12
 Publisher: ArnoHealth S.L. (onmedic, https://onmedic.com/), founded by Albert Arnó (https://albertarno.net/about/)
 Languages: Spanish (default, `/`), Catalan (`/ca/`) and English (`/en/`). The app is available in the same three languages.
 
@@ -27,6 +27,7 @@ Languages: Spanish (default, `/`), Catalan (`/ca/`) and English (`/en/`). The ap
 - [How to communicate with a person with dementia](https://dialgo.net/en/blog/how-to-communicate-dementia/) ([ES](https://dialgo.net/blog/como-comunicarse-persona-demencia/), [CA](https://dialgo.net/ca/blog/com-comunicar-se-persona-demencia/))
 - [How to organise a relative's care and share the responsibility](https://dialgo.net/en/blog/how-to-organize-dependent-relative-care/) ([ES](https://dialgo.net/blog/como-organizar-cuidado-familiar-dependiente/), [CA](https://dialgo.net/ca/blog/com-organitzar-cura-familiar-dependent/))
 - [Older adults living alone: how to know they are OK without taking away their independence](https://dialgo.net/en/blog/older-adults-living-alone/) ([ES](https://dialgo.net/blog/personas-mayores-que-viven-solas/), [CA](https://dialgo.net/ca/blog/persones-grans-que-viuen-soles/))
+- [Degrees of dependency in Spain: levels, assessment and caregiver benefits in 2026](https://dialgo.net/en/blog/degrees-of-dependency-spain-benefits/) ([ES](https://dialgo.net/blog/grados-de-dependencia-diferencias-cuantias/), [CA](https://dialgo.net/ca/blog/graus-de-dependencia-diferencies-quanties/))
 
 ## App availability and price
 
