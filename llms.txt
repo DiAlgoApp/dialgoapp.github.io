@@ -28,6 +28,7 @@ Languages: Spanish (default, `/`), Catalan (`/ca/`) and English (`/en/`). The ap
 - [How to organise a relative's care and share the responsibility](https://dialgo.net/en/blog/how-to-organize-dependent-relative-care/) ([ES](https://dialgo.net/blog/como-organizar-cuidado-familiar-dependiente/), [CA](https://dialgo.net/ca/blog/com-organitzar-cura-familiar-dependent/))
 - [Older adults living alone: how to know they are OK without taking away their independence](https://dialgo.net/en/blog/older-adults-living-alone/) ([ES](https://dialgo.net/blog/personas-mayores-que-viven-solas/), [CA](https://dialgo.net/ca/blog/persones-grans-que-viuen-soles/))
 - [Degrees of dependency in Spain: levels, assessment and caregiver benefits in 2026](https://dialgo.net/en/blog/degrees-of-dependency-spain-benefits/) ([ES](https://dialgo.net/blog/grados-de-dependencia-diferencias-cuantias/), [CA](https://dialgo.net/ca/blog/graus-de-dependencia-diferencies-quanties/))
+- [Home help service in Spain (SAD): hours by dependency degree and how to apply in 2026](https://dialgo.net/en/blog/home-help-service-spain/) ([ES](https://dialgo.net/blog/ayuda-a-domicilio-dependencia/), [CA](https://dialgo.net/ca/blog/ajuda-a-domicili-dependencia/))
 
 ## App availability and price
 
